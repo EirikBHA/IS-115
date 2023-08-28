@@ -23,9 +23,11 @@ echo endreEtternavn($etternavn);
 //Lager setning med det endrede etternavnet og sjekker hvor langt det er
 echo "<br>Etternavnet er " . strlen($etternavn) . " tegn langt";
 
-
 ?>
 
+<br>
+
+<?php echo '<a href="../modul2/index.php">Tilbake til startside</a>';
 
 
 
