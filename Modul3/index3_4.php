@@ -39,19 +39,19 @@
 
 <?php
 
-//Sjekker først om det faktisk har blitt valgt en kommune
+//Sjekker først om det faktisk har blitt valgt en kommune, slik at bruker ikke sender en tom form inn og gir en feilmelding
 if (empty($_POST["choice"])) {
 
     echo "Du må velge en kommune";
 
-    //Dersom det blir valgt en kommune kjøres denne
+    //Dersom det blir valgt en kommune kjøres denne som sjekker form som har blitt sendt med POST-metoden
 } else if (isset($_POST["submit"])) {
 
-    //init av kommune variabel. Den er den samme som det som har blitt valgt
+    //init av kommune variabel. Den er definert som det samme som det som har blitt valgt av bruker
     $kommune = $_POST["choice"];
 
-    //Bruker match statement. Kan ta å sjekke flere variabler og mathce det med én verdi
-    //Litt greiere å kode en en switch statement
+    //Bruker match statement. Kan ta å sjekke flere variabler og "mathce" det med én verdi
+    //Litt greiere å kode enn en lang switch statement
     $fylke = match ($kommune) {
         "Kristiansand", "Lillesand", "Birkenes" => "Agder",
         "Harstad", "Kvæfjord", "Tromsø" => "Troms og Finnmark",

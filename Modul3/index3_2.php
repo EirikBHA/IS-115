@@ -7,18 +7,24 @@ $sum = 0;
 for ($i= 0; $i <= 9; $i++){
 
 
+    //printer ut tallene
     print $i . "<br>";
 
-    flush();
+    //Koden skal i teorien gi en pause i at tallene blir skrevet ut, men sinker heller innlastningen av nettsiden
+    ob_implicit_flush(true);
+    ob_flush();
     sleep(1);
 
+    //Legger til de tallene vi har telt til summen av tall
     $sum += $i;
-}
-if ($sum = 9) {
 
-    echo "Ferdig med å telle! Summen av tallene ble: ", $sum;
 
 }
+
+//sleep(2);
+
+//Printer ut beskjed og summen etter at det har blitt telt
+echo "Ferdig med å telle! Summen av tallene ble: " , $sum;
 
 echo '<br><a href="../modul3/index.php">Tilbake til startside</a>';
 
