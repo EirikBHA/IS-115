@@ -10,7 +10,7 @@ for ($i= 0; $i <= 9; $i++){
     //printer ut tallene
     print $i . "<br>";
 
-    //Koden skal i teorien gi en pause i at tallene blir skrevet ut, men sinker heller innlastningen av nettsiden
+    //Gjør at sleep()-funksjonen fungerer og gir pause i tellingen
     ob_implicit_flush(true);
     ob_flush();
     sleep(1);
