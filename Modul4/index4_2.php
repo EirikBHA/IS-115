@@ -1,9 +1,9 @@
 <?php
 
 //Definere variabler og gjøre de tomme slik at de kan lagres
-//peter holdt på med detta på forelesning og skal legge ut
 $navnErr = $passErr = $tlfErr = $epostErr = "";
 
+//Sjekke om skjema har blitt sendt
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["navn"])) //Sjekker at bruker skriver inn navnet sitt
     {
@@ -53,18 +53,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!-- Opprette form hvor bruker kan fylle inn infoen sin og legger til feilmeldinger fra php-koden -->
 <form method="post" action="">
+
     <label for="Navn">Brukernavn</label><br>
     <input type="text" id="navn" name="navn"><br>
     <span class="error"> <?php echo $navnErr?></span><br>
+
     <label for="Passord">Passord</label><br>
     <input type="password" id="pass" name="pass"><br>
     <span class="error"> <?php echo $passErr ?></span><br>
+
     <label for="Mobilnummer">Mobilnummer</label><br>
     <input type="number" id="mobilnummer" name="mobilnummer"><br>
     <span class="error"> <?php echo $tlfErr?></span><br>
+
     <label for="Epost">Epost</label><br>
     <input type="text" id="epost" name="epost"><br>
     <span class="error"> <?php echo $epostErr?></span><br>
+
+
     <input type="submit" name="sendInn" value="Send inn"><br>
 </form>
 
