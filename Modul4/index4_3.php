@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $epostErr = "Du må skrive inn din riktige epost";
 
-    } else if (isset($_POST["sendInn"]) && $formData["navn"] != $_POST["navn"] && $formData["mobilnummer"] != $_POST["mobilnummer"] && $formData["epost"] != $_POST["epost"]) //dersom alt er i orden og bruker sender inn data som er ny så legges brukeren inn i arrayen
+    } else if (isset($_POST["sendInn"]) || $formData["navn"] != $_POST["navn"] || $formData["mobilnummer"] != $_POST["mobilnummer"] || $formData["epost"] != $_POST["epost"]) //dersom alt er i orden og bruker sender inn data som er ny så legges brukeren inn i arrayen
     {
 
         //Legger til formdata i array
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "epost" => $_POST["epost"]
         );
 
-        $meld = "Dette er din oppdatere brukerinfo<br>
+        $meld = "Dette er din oppdaterte brukerinfo<br>
         Brukernavn: " . $formData["navn"] . "<br>
         Mobilnummer: " . $formData["mobilnummer"] . "<br>
         Epostadresse: " . $formData["epost"];
