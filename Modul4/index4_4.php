@@ -8,9 +8,9 @@ $dato3 = strtotime("3 January 2024");
 
 //Definerer en to dimensjonal array. Ved å ha en array inni en array
 $jobber = array (
-    array("Vaskjehjelp", "Vi trenger hjelp til vasking, søk nå og få spenn!", date("d-m-y", $dato1), "Vågsbygd"),
-    array("Bussjåfør", "Ledig bussjåfør stilling i Hønefoss! Fagbrev foretrukket", date("d-m-y", $dato2), "Hønefoss"),
-    array("IT-konsulent", "Stilling som IT-konsulent ledig hos oss, send github-link", date("d-m-y", $dato3), "Finnmark"),
+    array("Stillingstittel" => "Vaskjehjelp", "Beskrivelse" => "Vi trenger hjelp til vasking, søk nå og få spenn!","Frist for søknad" => date("d-m-y", $dato1),"Sted" => "Vågsbygd"),
+    array("Stillingstittel" => "Bussjåfør", "Beskrivelse" => "Ledig bussjåfør stilling i Hønefoss! Fagbrev foretrukket", "Frist for søknad" => date("d-m-y", $dato2), "Sted" => "Hønefoss"),
+    array("Stillingstittel" => "IT-konsulent", "Beskrivelse" => "Stilling som IT-konsulent ledig hos oss, send github-link", "Frist for søknad" => date("d-m-y", $dato3), "Sted" => "Finnmark"),
 );
 
 //Lager tabell

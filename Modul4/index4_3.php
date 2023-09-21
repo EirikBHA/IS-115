@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $navnErr = "Du må skrive inn navnet ditt";
 
-    }  else if (empty($_POST["mobilnummer"]) || strlen($_POST["mobilnummer"] < 9)) //sjekker at bruker skriver inn tlf nr og at det er 9 sifra langt
+    }  else if (empty($_POST["mobilnummer"]) || strlen($_POST["mobilnummer"]) < 8) //sjekker at bruker skriver inn tlf nr og at det er 9 sifra langt
     {
 
         $tlfErr = "Du må skrive inn mobilnummer og passe på at det er minst 9 sifre langt";
@@ -60,16 +60,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <form method="post" action="">
 
     <label for="Navn">Brukernavn</label><br>
-    <input type="text" id="navn" name="navn"><br>
+    <input type="text" id="navn" name="navn" value="<?php echo $formData["navn"]; ?>"><br>
     <span class="error"> <?php echo $navnErr?></span><br>
 
 
     <label for="Mobilnummer">Mobilnummer</label><br>
-    <input type="number" id="mobilnummer" name="mobilnummer"><br>
+    <input type="number" id="mobilnummer" name="mobilnummer" value="<?php echo $formData["mobilnummer"]; ?>"><br>
     <span class="error"> <?php echo $tlfErr?></span><br>
 
     <label for="Epost">Epost</label><br>
-    <input type="text" id="epost" name="epost"><br>
+    <input type="text" id="epost" name="epost" value="<?php echo $formData["epost"]; ?>"><br>
     <span class="error"> <?php echo $epostErr?></span><br>
 
 

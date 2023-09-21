@@ -34,8 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 }
 ?>
 
-<!-- Opprette form hvor bruker kan fylle inn infoen sin -->
-<h2>Oppdater din info i matrisen!</h2>
+<!-- Opprette form hvor bruker kan fylle inn meldingen sin -->
+<h2>Send en melding!</h2>
 <form method="post" action="">
 
     <label for="Navn">Navn</label><br>
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     <span class="error"> <?php echo $emneErr?></span><br>
 
     <label for="innhold">Innhold</label><br>
-    <textarea id="innhold" id="innhold" name="innhold" rows="4" cols="50">Skriv inn melding...</textarea><br>
+    <textarea id="innhold" id="innhold" name="innhold" rows="4" cols="50" placeholder="Skriv inn melding..."></textarea><br>
 
 
     <input type="submit" name="sendInn" value="Send inn"><br>

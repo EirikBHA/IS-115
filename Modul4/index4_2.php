@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $passErr = "Du må skrive inn passordet ditt eller passe på at det er 8 tegn langt";
 
-    } else if (empty($_POST["mobilnummer"]) || strlen($_POST["mobilnummer"] < 9)) //sjekker at bruker skriver inn tlf nr og at det er 9 sifra langt
+    } else if (empty($_POST["mobilnummer"]) || strlen($_POST["mobilnummer"]) < 9) //sjekker at bruker skriver inn tlf nr og at det er 9 sifra langt
     {
 
         $tlfErr = "Du må skrive inn mobilnummer og passe på at det er minst 9 sifre langt";
